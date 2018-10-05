@@ -1,0 +1,88 @@
+.scoreIndicator{
+    flex-basis: 100%;
+    max-width: 415px;
+    position: relative;
+}
+
+.scoreIndicator__circular{
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.18);
+    padding-top: 100%;
+    color: white;
+    font-family: cursive;
+    font-size: 1.4rem; 
+    
+    @media screen and (max-width: 400px) {
+        font-size: 1rem; 
+    }
+
+    > div{
+        display: flex;
+        left: 0;
+        pointer-events: all;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+    }
+}
+
+.scoreIndicator__score-item{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.scoreIndicator__slick-slider{
+    width: 100%;   
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    > .slick-list{
+        width: 100%;
+    }
+}
+
+.scoreIndicator__slick-slider-button{
+    bottom: 50px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    padding: 0px;   
+
+    li{
+        float: left;
+        button{
+            cursor: pointer;
+            border-radius: 50%;
+            color: transparent;
+            background-color: transparent;
+            border: none;
+            margin-left: 10px;
+            box-sizing: border-box;
+            border: 1.3px solid white;
+            width: 10px;
+            outline: none;
+            height: 15px;
+        }
+    }
+
+    li.slick-active{
+        button{
+            background: white;
+        }
+    }
+}
